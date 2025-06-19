@@ -17,8 +17,12 @@ docker build -t nkay8/order-service:latest .
 docker push nkay8/order-service:latest
 
 kubectl port-forward svc/order-service 4000:80
-http://localhost:4000/orders
+http://localhost:127.0.0.1:39246/orders
 minikube service order-service
+
+http://192.168.49.2:30899/payments
+minikube service payment-service
+
 
 docker run -d --name jenkins \
   -p 9191:8080 -p 50000:50000 \
@@ -38,10 +42,9 @@ docker rm jenkins
 ( This will remove all saved Jenkins jobs, settings, and users:)
 docker volume rm jenkins_home 
 
-pat
 
-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
 
+docker build -t jenkins-docker-enabled .
 
 
 docker run -d --name jenkins `
