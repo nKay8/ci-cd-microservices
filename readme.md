@@ -22,8 +22,10 @@ minikube service order-service
 
 docker run -d --name jenkins \
   -p 9191:8080 -p 50000:50000 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
   -v jenkins_home:/var/jenkins_home \
-  jenkins/jenkins:lts
+  jenkins/jenkins:lts-jdk11
+
 
 Now you can open Jenkins at:
  http://localhost:9191 
@@ -35,3 +37,15 @@ docker rm jenkins
 
 ( This will remove all saved Jenkins jobs, settings, and users:)
 docker volume rm jenkins_home 
+
+pat
+
+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
+
+
+
+docker run -d --name jenkins `
+  -p 9191:8080 -p 50000:50000 `
+  -v //var/run/docker.sock:/var/run/docker.sock `
+  -v jenkins_home:/var/jenkins_home `
+  jenkins-docker
