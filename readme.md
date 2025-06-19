@@ -38,9 +38,9 @@ docker rm jenkins
 ( This will remove all saved Jenkins jobs, settings, and users:)
 docker volume rm jenkins_home 
 
-pat
 
-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
+
+
 
 
 
