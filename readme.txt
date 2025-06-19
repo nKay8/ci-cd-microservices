@@ -44,6 +44,7 @@ docker volume rm jenkins_home
 
 
 
+
 docker build -t jenkins-docker-enabled .
 
 
